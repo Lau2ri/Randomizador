@@ -17,12 +17,12 @@ def random_7():
         return ((num - 1) % 7) + 1
     return random_7()
 
-# Aquí se utiliza random_7 para generar 500 números aleatorios
+# Se utiliza random_7 para generar 5000 números aleatorios
 resultados = []
-for i in range(5000):
+for i in range(5000): # Este valor puede ser modificado a gusto
     resultados.append(random_7())
 
-# Aquí se grafican estos número en un histograma
+# Se grafica la frecuencia de número en un histograma
 plt.hist(resultados, bins=7, edgecolor='black', rwidth=0.8)
 plt.xlabel('Número')
 plt.ylabel('Frecuencia')
@@ -33,5 +33,4 @@ print("FRECUENCIA DE LOS NÚMEROS:")
 for i in range(1, 8):
     freq = resultados.count(i)
     print(f"Número {i}: {freq} veces ({freq/50:.1f}%)")
-
 plt.show()
