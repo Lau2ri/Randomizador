@@ -28,6 +28,7 @@ plt.xlabel('Número')
 plt.ylabel('Frecuencia')
 plt.title('Distribución de números aleatorios entre 1 y 7 de 5000 muestras')
 plt.xticks(range(1, 8))
+plt.savefig('histograma.png', dpi=300, bbox_inches='tight')
 print("FRECUENCIA DE LOS NÚMEROS:")
 for i in range(1, 8):
     freq = resultados.count(i)
